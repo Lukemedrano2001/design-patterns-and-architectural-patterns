@@ -5,7 +5,7 @@ public class AprovaExameSangue implements IAprovaExame {
 	@Override
 	public void aprovarSolicitacaoExame(Exame exame) {
 		if(verificaCondicoesExame(exame)) {
-			System.out.println("Raio-X aprovado!");			
+			System.out.println("Exame de sangue aprovado!");			
 		}
 	}
 
