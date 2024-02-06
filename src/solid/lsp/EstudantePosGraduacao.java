@@ -7,6 +7,6 @@ public class EstudantePosGraduacao extends Estudante {
 
 	@Override
 	public String estudar() {
-    	return String.format("%s está estudando e pesquisando.", this.nome);
+    		return String.format("%s está estudando e pesquisando.", this.nome);
     }
 }
