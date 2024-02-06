@@ -1,9 +1,9 @@
 package solid.dip;
 
 public class PedidoService {
-	private IPedidoRepository repository;
-
-	public PedidoService(IPedidoRepository repository) {
+    private IPedidoRepository repository;
+	
+    public PedidoService(IPedidoRepository repository) {
         this.repository = repository;
     }
 	
