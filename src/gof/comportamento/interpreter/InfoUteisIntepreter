@@ -1,0 +1,34 @@
+Interpreter: É um padrão de projeto comportamental que lida com a interpretação de expressões em uma linguagem específica. Ele permite definir gramáticas para a linguagem e implementar intérpretes para avaliar essas expressões. A principal vantagem é fornecer uma solução flexível para interpretar e executar operações associadas a gramáticas complexas.
+
+
+
+- Problema: O problema abordado pelo padrão Interpreter surge quando há a necessidade de interpretar e avaliar expressões em uma linguagem específica. O objetivo é criar uma solução flexível para interpretar gramáticas ou representações de linguagens e executar operações associadas.
+
+
+
+- Solução: O Interpreter oferece uma solução para o problema de interpretação de linguagens por meio da definição de uma gramática e da implementação de intérpretes para cada elemento da gramática. Cada intérprete é responsável por interpretar e executar uma parte específica da expressão.
+
+
+
+- Quando usar:
+	+ O padrão Interpreter é adequado quando se lida com gramáticas complexas e é necessário interpretar e avaliar expressões em uma linguagem específica. É especialmente útil quando se deseja criar uma linguagem própria ou fornecer uma maneira flexível de representar operações.
+
+
+
+- Implementação:
+	+ A implementação do Interpreter envolve a definição de uma classe para cada símbolo terminal ou não terminal da gramática. Cada classe implementa um método de interpretação que realiza a operação associada ao símbolo. A composição desses intérpretes é usada para interpretar expressões mais complexas.
+
+
+
+- Vantagens:
+	+ Facilita a interpretação de gramáticas complexas.
+	+ Permite a extensibilidade da linguagem interpretada.
+	+ Separa a sintaxe da interpretação, promovendo uma maior flexibilidade.
+
+
+
+- Desvantagens:
+	+ Pode tornar-se complexo à medida que a gramática se expande, resultando em um grande número de classes intérpretes.
+	+ Aumenta a possibilidade de erros, especialmente ao lidar com gramáticas extensas.
+
+

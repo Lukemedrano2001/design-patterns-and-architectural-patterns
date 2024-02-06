@@ -1,0 +1,43 @@
+Service Oriented Architeture (SOA): É um estilo arquitetural que organiza sistemas como um conjunto de serviços independentes, interconectados e interoperáveis, promovendo a reutilização e a flexibilidade.
+
+
+
+- Características Principais:
+	+ Serviços Independentes: Componentes autônomos que oferecem funcionalidades específicas.
+	+ Interoperabilidade: Serviços podem ser combinados e interagem uns com os outros, geralmente por meio de interfaces padrão.
+	+ Reusabilidade: Encoraja a reutilização de serviços em diferentes partes do sistema ou em sistemas distintos.
+
+
+
+- Elementos-Chave:
+	+ Serviços: Funcionalidades autônomas com interfaces bem definidas e independentes.
+	+ Contratos: Especificações claras que definem como os serviços podem ser utilizados, incluindo entrada e saída.
+	+ Registro e Descoberta: Mecanismos para identificar, registrar e descobrir serviços disponíveis.
+
+
+
+- Objetivos:
+	+ Flexibilidade: Facilita a adaptação às mudanças, permitindo a substituição ou atualização de serviços individualmente.
+	+ Reusabilidade: Encoraja a criação de serviços genéricos que podem ser utilizados em diferentes contextos.
+	+ Interoperabilidade: Permite que diferentes sistemas e tecnologias trabalhem juntos de forma coesa.
+
+
+
+- Vantagens:
+	+ Desacoplamento: Menos dependência entre componentes, facilitando a manutenção e evolução.
+	+ Reusabilidade: Componentes podem ser reutilizados em diferentes contextos.
+	+ Escalabilidade: Serviços podem ser escalados independentemente conforme a demanda.
+
+
+
+- Desvantagens:
+	+ Complexidade na Gestão de Serviços: Requer uma boa governança para gerenciar e manter a descoberta, registro e atualização dos serviços.
+	+ Padrões e Consistência: A necessidade de padronização para garantir consistência e interoperabilidade entre os serviços.
+
+
+
+- Exemplo Prático:
+	+ Sistema Bancário: Pode ter serviços independentes para verificação de saldo, transferências, processamento de pagamentos, cada um sendo um serviço separado interagindo por meio de padrões como SOAP ou REST.
+
+	
+	

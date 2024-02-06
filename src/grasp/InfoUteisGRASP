@@ -1,0 +1,4 @@
+General Responsibility Assignment Software Patterns (GRASP): O General Responsibility Assignment Software Patterns (GRASP) é um conjunto de padrões de design de software que fornece diretrizes para atribuição de responsabilidades a classes e objetos. 
+	Desenvolvido para orientar o processo de design orientado a objetos, o GRASP aborda questões fundamentais, como a atribuição de responsabilidades apropriadas, o gerenciamento do acoplamento entre classes e a promoção da coesão no sistema. 
+	 Os padrões GRASP incluem conceitos como Alta Coesão, Baixo Acoplamento, Controlador, Criador, Especialista, Indireção, Polimorfismo, Variações Protegidas e Fabricação Pura.
+	 Cada padrão oferece soluções específicas para problemas comuns encontrados durante o design de software orientado a objetos, contribuindo para a criação de sistemas flexíveis, coesos e de fácil manutenção.

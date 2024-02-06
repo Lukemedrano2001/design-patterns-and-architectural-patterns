@@ -1,0 +1,39 @@
+Controller:
+
+
+
+- Problema: Em sistemas de software, é essencial gerenciar o fluxo de execução e a interação entre diferentes partes do sistema de forma organizada. Um código que não possui uma estrutura de controle adequada pode se tornar difícil de entender e manter.
+
+
+
+- Solução: O padrão de projeto Controller visa separar a lógica de controle do restante do sistema, proporcionando uma maneira centralizada de coordenar as ações. Isso ajuda a evitar que partes específicas do sistema tenham conhecimento direto umas das outras.
+
+
+
+- Quando usar:
+	+ Use quando desejar um ponto central de coordenação no seu sistema.
+	+ Utilize para evitar a dependência direta entre componentes.
+	+ Útil para separar a lógica de apresentação da lógica de negócios.
+
+
+
+- Implementação:
+	+ Crie uma classe Controller responsável por coordenar as ações e gerenciar o fluxo de execução.
+	+ Evite lógica de negócios diretamente em componentes de visualização ou modelos de dados.
+	+ Utilize o Controller para receber e despachar eventos.
+	+ Pode ser implementado como parte do padrão Model-View-Controller (MVC) ou outros padrões arquiteturais.
+
+
+
+- Vantagens:
+	+ Melhora a organização e clareza do código.
+	+ Facilita a manutenção, uma vez que a lógica de controle está centralizada.
+	+ Permite a reutilização de componentes independentemente da lógica de controle específica do aplicativo.
+
+
+
+- Desvantagens:
+	+ Em alguns casos, pode introduzir uma camada adicional de abstração.
+	+ Requer cuidado para evitar que o Controller se torne muito volumoso e difícil de manter.
+
+

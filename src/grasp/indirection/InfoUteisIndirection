@@ -1,0 +1,34 @@
+Indirection:
+
+
+
+- Problema: O problema abordado pelo Indirection no contexto do GRASP é quando uma classe precisa realizar uma ação, mas não é apropriado atribuir diretamente essa responsabilidade a ela. Isso pode ocorrer quando a classe não possui conhecimento suficiente para realizar a operação, ou a responsabilidade pertence a outra classe.
+
+
+
+- Solução: A solução é introduzir uma classe intermediária, atuando como um intermediário ou indireção, para realizar a operação. Essa classe intermediária será responsável por coordenar a execução da operação, delegando tarefas conforme necessário.
+
+
+
+- Quando usar:
+	+ O Indirection é útil quando há a necessidade de desacoplar uma classe que solicita uma ação da classe que a executa. Isso é especialmente relevante quando a classe solicitante não deve ou não pode realizar diretamente a operação.
+
+
+
+- Implementação:
+	+ Implementar o Indirection envolve a criação de uma classe intermediária que atua como um facilitador entre a classe solicitante e a classe executora. Essa classe intermediária coordena a execução da operação.
+
+
+
+- Vantagens:
+	+ Desacopla a classe solicitante da classe executora, melhorando a manutenção e a flexibilidade do sistema.
+	+ Permite uma maior reutilização de código, pois a classe intermediária pode ser usada para coordenar diferentes operações.
+
+
+
+- Desvantagens:
+	+ Introduz uma camada adicional no sistema, o que pode aumentar a complexidade, especialmente se não for aplicado com moderação.
+	+ Pode levar a um aumento no número de classes no sistema, dependendo da quantidade de operações intermediadas.
+
+
+

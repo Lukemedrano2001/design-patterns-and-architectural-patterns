@@ -1,0 +1,42 @@
+Builder: É um padrão de projeto criacional que permite a você construir objetos complexos passo a passo. O padrão permite que você produza diferentes tipos e representações de um objeto usando o mesmo código de construção.
+
+
+
+- Problema: Quando você precisa construir objetos complexos com múltiplos parâmetros, pode ser inconveniente ou impraticável ter construtores sobrecarregados com uma variedade de parâmetros opcionais. Isso pode levar a uma má legibilidade do código, além de ser propenso a erros quando alguns parâmetros são omitidos. Além disso, se você deseja criar diferentes representações de um objeto usando o mesmo código de construção, pode ser desafiador fazê-lo sem resultar em código complexo e difícil de manter.
+
+
+
+- Solução: O padrão Builder resolve esse problema permitindo a construção de objetos passo a passo, usando apenas as etapas necessárias. Ele é útil quando você deseja criar diferentes representações do mesmo produto ou quando as etapas de construção são similares, mas os detalhes variam. A interface base do builder define as etapas possíveis de construção, enquanto os builders concretos implementam essas etapas para construir representações específicas do produto. O diretor guia a ordem de construção, facilitando a criação de diferentes variantes do produto.
+
+
+
+- Quando usar: 
+	+ Digamos que você tenha um construtor com dez parâmetros opcionais. Chamar um monstro desses é muito inconveniente; portanto, você sobrecarrega o construtor e cria diversas versões curtas com menos parâmetros. Esses construtores ainda se referem ao principal, passando alguns valores padrão para qualquer parâmetro omitido.
+	+ O padrão Builder permite que você construa objetos passo a passo, usando apenas aquelas etapas que você realmente precisa. Após implementar o padrão, você não vai mais precisar amontoar dúzias de parâmetros em seus construtores.
+	+ Use o padrão Builder quando você quer que seu código seja capaz de criar diferentes representações do mesmo produto (por exemplo, casas de pedra e madeira).
+	+ O padrão Builder pode ser aplicado quando a construção de várias representações do produto envolvem etapas similares que diferem apenas nos detalhes.
+	+ A interface base do builder define todas as etapas de construção possíveis, e os buildrs concretos implementam essas etapas para construir representações particulares do produto. Enquanto isso, a classe diretor guia a ordem de construção.
+
+
+
+- Implementação: 
+	+ Certifique-se que você pode definir claramente as etapas comuns de construção para construir todas as representações do produto disponíveis. Do contrário, você não será capaz de implementar o padrão.
+	+ Declare essas etapas na interface builder base.
+	+ Crie uma classe builder concreta para cada representação do produto e implemente suas etapas de construção.
+	+ Não se esqueça de implementar um método para recuperar os resultados da construção. O motivo pelo qual esse método não pode ser declarado dentro da interface do builder é porque vários builders podem construir produtos que não tem uma interface comum. Portanto, você não sabe qual será o tipo de retorno para tal método. Contudo, se você está lidando com produtos de uma única hierarquia, o método de obtenção pode ser adicionado com segurança para a interface base.
+	+ Pense em criar uma classe diretor. Ela pode encapsular várias maneiras de construir um produto usando o mesmo objeto builder.
+	+ O código cliente cria tanto os objetos do builder como do diretor. Antes da construção começar, o cliente deve passar um objeto builder para o diretor. Geralmente o cliente faz isso apenas uma vez, através de parâmetros do construtor do diretor. O diretor usa o objeto builder em todas as construções futuras. Existe uma alternativa onde o builder é passado diretamente ao método de construção do diretor.
+	+ O resultado da construção pode ser obtido diretamente do diretor apenas se todos os produtos seguirem a mesma interface. Do contrário o cliente deve obter o resultado do builder.
+
+
+- Vantagens:
+	+ Você pode construir objetos passo a passo, adiar as etapas de construção ou rodar etapas recursivamente.
+	+ Você pode reutilizar o mesmo código de construção quando construindo várias representações de produtos.
+	+ Princípio de responsabilidade única. Você pode isolar um código de construção complexo da lógica de negócio do produto.
+
+
+
+- Desvantagens:
+	+  A complexidade geral do código aumenta uma vez que o padrão exige criar múltiplas classes novas.
+
+	

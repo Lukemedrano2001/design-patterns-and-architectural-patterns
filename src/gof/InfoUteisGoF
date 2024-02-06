@@ -1,0 +1,18 @@
+Gang of Four (GoF): O Gang of Four (GoF) representa um grupo de quatro autores que escreveram o livro "Design Patterns", que descreve 23 padrões de design reutilizáveis para criar software mais flexível, modular e fácil de entender.
+
+
+
+- Design Patterns: Os padrões de design apresentados no livro estão divididos em três categorias principais:
+	+ Criação (5 padrões): Abstract Factory, Builder, Factory Method, Prototype e Singleton.
+	+ Estruturais (7 padrões): Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy.
+	+ Comportamento (11 padrões): Chain of Responsibility, Command, Interpreter, Iterator, Mediator, Memento, Observer, State, Strategy, Template Method, Visitor. 
+
+	
+	
+- Objetivo: O principal objetivo do GoF é fornecer soluções para problemas recorrentes no design de software, promovendo a reutilização, flexibilidade e manutenibilidade.
+
+
+
+- Princípios: Os padrões do GoF incorporam princípios fundamentais, como favorecer a composição sobre a herança, programar para interfaces em vez de implementações e encapsular o que varia.
+
+

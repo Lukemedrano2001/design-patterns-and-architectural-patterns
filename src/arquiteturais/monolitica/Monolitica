@@ -1,0 +1,27 @@
+Monolítica: É um estilo arquitetural em que todos os componentes e funcionalidades da aplicação são desenvolvidos, implementados e implantados como uma única unidade. 
+
+
+
+- Características Principais:
+	+ Unidade Única: Todos os módulos e funcionalidades são empacotados juntos como uma única aplicação.
+	+ Comunicação Interna: A comunicação entre os componentes ocorre geralmente por meio de chamadas diretas de função ou bibliotecas compartilhadas.
+	+ Implantação Única: A aplicação é implantada como uma única unidade, muitas vezes em um servidor único.
+
+
+
+- Vantagens:
+	+ Simplicidade Inicial: Geralmente mais fácil de desenvolver e implantar inicialmente.
+	+ Facilidade de Manutenção: Pode ser mais simples de manter em casos de aplicações pequenas e médias.
+
+
+
+- Desvantagens:
+	+ Escala: Dificuldade em escalar horizontalmente para lidar com aumento de carga.
+	+ Acoplamento: Alterações em um módulo podem afetar outros, devido ao acoplamento mais forte.
+	+ Manutenção a Longo Prazo: Torna-se desafiador gerenciar e evoluir à medida que a aplicação cresce.
+
+
+
+- Exemplo: Uma aplicação web em que o frontend, backend e banco de dados são todos parte de um único código-base e são implantados como uma única aplicação.
+
+

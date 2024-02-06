@@ -1,0 +1,69 @@
+Domain Driven Design (DDD): É uma abordagem de design de software que se concentra na modelagem do domínio da aplicação para garantir uma compreensão clara e uma implementação eficiente. DDD é composto por alguns conceitos-chave, incluindo:
+
+
+
+- Entidades: 
+	+ Representam objetos distintos e significativos no domínio, possuindo uma identidade única.
+
+
+- Objetos de Valor: 
+	+ São objetos definidos apenas por seus atributos, sem identidade própria.
+
+
+- Agregados: 
+	+ Agrupam entidades e objetos de valor relacionados, garantindo consistência e integridade.
+
+
+- Repositórios: 
+	+ Fornecem uma interface para persistência e recuperação de entidades e agregados.
+
+
+- Serviços de Domínio: 
+	+ Contêm lógica de negócios que não se encaixa naturalmente em entidades ou objetos de valor.
+
+
+- Camada de Aplicação: 
+	+ Coordena a execução das operações de domínio, conectando a interface do usuário com o domínio.
+
+
+- Evento de Domínio: 
+	+ Representa mudanças significativas no estado do sistema e é usado para comunicar alterações entre diferentes partes do sistema.
+
+
+- Domínio: 
+	+ O contexto específico do negócio ao qual o software se aplica.
+
+
+- Bounded Context (Contexto Delimitado): 
+	+ Define os limites dentro dos quais um determinado modelo é válido, permitindo múltiplos contextos delimitados em uma aplicação.
+	+ Pode usar do padrão DTO (Data Transfer Object) para transportar dados do domínio para fora do Bounded Context. Facilitando a comunicação entre diferentes camadas ou contextos na aplicação.
+
+
+- Interfaces Anti-Corruption (IAC): 
+	+ Interfaces ou tradutores que evitam que conceitos de um contexto delimitado afetem diretamente outro contexto.
+
+
+- Módulos: 
+	+ Agrupam elementos relacionados do domínio para organização e separação clara de responsabilidades.
+
+
+- DSL (Domain-Specific Language): 
+	+ Uma linguagem específica criada para expressar conceitos do domínio de forma clara e compreensível.
+
+
+- Padrões Estratégicos e Táticos: 
+	+ Estratégias de design para lidar com questões específicas do domínio, como subdomínios, contextos delimitados, etc.
+
+
+- Testes de Unidade no Domínio: 
+	+ Testes focados em garantir que as regras de negócio no domínio estão sendo implementadas corretamente.
+
+
+- Projeções e Leituras: 
+	+ No contexto de arquiteturas CQRS, são modelos separados para leitura e escrita, otimizados para diferentes finalidades.
+
+
+- Materializar Agregados: 
+	+ Processo de recriar agregados a partir de eventos de domínio armazenados, mantendo consistência e integridade no sistema.
+
+

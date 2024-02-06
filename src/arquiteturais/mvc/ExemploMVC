@@ -1,0 +1,39 @@
+- Exemplo de MVC em um Sistema de Blog:
+
+
+
+- Model:
+	+ Representa a lógica de negócios do sistema.
+	+ Exemplo: Classe PostModel que gerencia os posts, interage com o banco de dados para salvar e recuperar posts.
+
+
+
+- View:
+	Representa a camada de visualização.
+	Exemplo: Páginas HTML que mostram os posts e formulários para criar novos posts.
+
+
+
+- Controller:
+	Gerencia as interações do usuário, coordena as ações entre Model e View.
+	Exemplo: PostController que recebe requisições HTTP para criar ou exibir posts, interage com o PostModel e atualiza a View correspondente.
+
+
+
+- Exemplo de Fluxo:
+	+ Usuário acessa a página inicial (View):
+		1-) A View envia uma requisição ao PostController.
+	+ PostController recebe a requisição: 
+		2-) Interage com o PostModel para recuperar os posts do banco de dados.
+	+ Envia os dados formatados para a View.
+	+ View exibe os posts ao usuário: 
+		3-) Utiliza os dados fornecidos pelo PostController.
+	+ Usuário cria um novo post: 
+		4-) A View envia uma requisição ao PostController com os dados do novo post.
+	+ PostController recebe a requisição: 
+		5-) Valida os dados, interage com o PostModel para salvar o novo post no banco de dados.
+	+ View é atualizada: 
+		6-) Mostra o novo post, utilizando os dados fornecidos pelo PostController.
+	
+	
+	

@@ -1,0 +1,40 @@
+Baixo Acoplamento:
+
+
+
+- Problema: O Alto acoplamento entre classes pode levar a um código rígido e difícil de manter, onde as mudanças em uma classe podem impactar muitas outras.
+
+
+
+- Solução: O Baixo acoplamento é alcançado reduzindo as dependências entre classes. Cada classe deve depender apenas do necessário para realizar sua função, minimizando as interdependências.
+
+
+
+- Quando usar:
+	+ Use quando desejar criar um sistema flexível e fácil de manter.
+	+ Utilize quando as mudanças em uma parte do sistema não devem causar impactos significativos em outras partes.
+
+
+
+- Implementação:
+	+ Evite depender de detalhes internos de outras classes.
+	+ Use interfaces ou abstrações para desacoplar implementações concretas.
+	+ Utilize padrões de injeção de dependência para fornecer dependências externas.
+	+ Evite acoplamento rígido, como chamadas diretas a métodos de outras classes, sempre que possível.
+	+ Utilize eventos ou callbacks para permitir a comunicação sem acoplamento direto.
+
+
+
+- Vantagens:
+	+ Facilita a manutenção e evolução do código.
+	+ Permite alterações em uma parte do sistema sem afetar outras partes.
+	+ Torna o código mais modular e reutilizável.
+	+ Favorece o princípio de aberto/fechado, onde novas funcionalidades podem ser adicionadas sem modificar o código existente.
+
+
+
+- Desvantagens:
+	+ Em alguns casos, pode aumentar a complexidade inicial do design.
+	+ Exige um cuidadoso equilíbrio para evitar excesso de complexidade ou excesso de abstração.
+
+

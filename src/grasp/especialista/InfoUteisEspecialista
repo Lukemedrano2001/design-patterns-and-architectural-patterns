@@ -1,0 +1,36 @@
+Especialista:
+
+
+
+- Problema: Ao projetar sistemas orientados a objetos, é necessário atribuir responsabilidades de maneira eficiente para evitar acoplamento excessivo. O problema surge quando não está claro qual classe deve ser responsável por uma determinada tarefa ou comportamento.
+
+
+
+- Solução: O padrão de design GRASP chamado Especialista sugere que a responsabilidade deve ser atribuída à classe que possui as informações necessárias para realizar a tarefa ou comportamento. Em outras palavras, a classe que tem o conhecimento necessário deve ser a especialista nessa responsabilidade.
+
+
+
+- Quando usar:
+	+ Use quando é necessário decidir qual classe deve ser responsável por uma determinada tarefa ou comportamento.
+	+ Utilize quando uma classe possui as informações necessárias para realizar uma operação específica.
+	+ Útil quando se deseja evitar acoplamento excessivo e promover uma estrutura mais coesa.
+
+
+
+- Implementação:
+	+ Atribua a responsabilidade a uma classe que possui as informações necessárias para realizar a tarefa ou comportamento.
+	+ Considere a coesão e a encapsulação ao decidir qual classe é a especialista para uma determinada responsabilidade.
+
+
+
+- Vantagens:
+	+ Promove um design mais coeso, onde as responsabilidades estão bem distribuídas.
+	+ Reduz o acoplamento, pois a classe especialista possui apenas as informações necessárias.
+
+
+
+- Desvantagens:
+	+ Em alguns casos, pode ser desafiador determinar qual classe é a verdadeira especialista.
+	+ Pode resultar em classes especialistas que têm muitas responsabilidades. A famosa GodClass, ou classe/método que faz várias coisas.
+
+

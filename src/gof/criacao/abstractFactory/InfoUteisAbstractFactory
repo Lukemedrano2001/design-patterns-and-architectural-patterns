@@ -1,0 +1,38 @@
+Abstract Factory: É um padrão de projeto criacional que permite que você produza famílias de objetos relacionados sem ter que especificar suas classes concretas.
+
+
+- Problema: Quando lidamos com a criação de objetos que pertencem a famílias relacionadas, podemos nos deparar com o desafio de garantir a consistência entre esses objetos sem depender de suas classes concretas. Se precisarmos trabalhar com diversas famílias de produtos, pode ser complicado e impraticável criar esses objetos diretamente, pois isso pode resultar em uma complexidade desnecessária e acoplamento rígido no código.
+
+
+
+- Solução: O padrão Abstract Factory resolve esse problema fornecendo uma interface para a criação de famílias inteiras de objetos relacionados, sem especificar suas classes concretas. Isso permite que o código cliente trabalhe com as famílias de produtos de maneira genérica, sem a necessidade de conhecer detalhes específicos de implementação. Ao utilizar uma fábrica abstrata, o código cliente é desacoplado das classes concretas dos produtos, proporcionando flexibilidade e facilidade de manutenção.
+
+
+
+- Quando usar:  
+	+ Use o Abstract Factory quando seu código precisa trabalhar com diversas famílias de produtos relacionados, mas que você não quer depender de classes concretas daqueles produtos-eles podem ser desconhecidos de antemão ou você simplesmente quer permitir uma futura escalabilidade.
+	+ O Abstract Factory fornece a você uma interface para a criação de objetos de cada classe das famílias de produtos. Desde que seu código crie objetos a partir dessa interface, você não precisará se preocupar em criar uma variante errada de um produto que não coincida com produtos já criados por sua aplicação.
+	
+	
+- Implementação:
+	+ Mapeie uma matriz de tipos de produtos distintos versus as variantes desses produtos.
+	+ Declare interfaces de produto abstratas para todos os tipos de produto. Então, faça todas as classes concretas de produtos implementar essas interfaces.
+	+ Declare a interface da fábrica abstrata com um conjuntos de métodos de criação para todos os produtos abstratos.
+	+ Implemente um conjunto de classes fábricas concretas, uma para cada variante de produto.
+	+ Crie um código de inicialização da fábrica em algum lugar da aplicação. Ele deve instanciar uma das classes fábrica concretas, dependendo da configuração da aplicação ou do ambiente atual. Passe esse objeto fábrica para todas as classes que constroem produtos.
+	+ Escaneie o código e encontre todas as chamadas diretas para construtores de produtos. Substitua-as por chamadas para o método de criação apropriado no objeto fábrica.
+
+
+
+- Vantagens:
+	+ Você pode ter certeza que os produtos que você obtém de uma fábrica são compatíveis entre si.
+	+ Você evita um vínculo forte entre produtos concretos e o código cliente.
+	+ Princípio de responsabilidade única. Você pode extrair o código de criação do produto para um lugar, fazendo o código ser de fácil manutenção.
+	+ Princípio aberto/fechado. Você pode introduzir novas variantes de produtos sem quebrar o código cliente existente.
+
+
+
+- Desvantagens:
+	+ O código pode tornar-se mais complicado do que deveria ser, uma vez que muitas novas interfaces e classes são introduzidas junto com o padrão.
+	
+	

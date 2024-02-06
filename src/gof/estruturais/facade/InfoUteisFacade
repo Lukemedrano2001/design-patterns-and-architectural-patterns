@@ -1,0 +1,36 @@
+Facade: É um padrão de projeto estrutural que fornece uma interface simplificada para uma biblioteca, um framework, ou qualquer conjunto complexo de classes.
+
+
+
+- Problema: Ao lidar com um subsistema complexo, a interface fornecida pode se tornar extensa e complicada para os clientes. À medida que a complexidade do subsistema aumenta, a quantidade de código padrão e de configuração necessária pelo cliente também cresce, tornando a interação mais difícil.
+
+
+
+- Solução: O padrão Facade resolve esse problema fornecendo uma interface simplificada para um subsistema complexo. Ele atua como um ponto de entrada único, oferecendo uma abstração para as funcionalidades mais utilizadas do subsistema. A Facade simplifica a interação do cliente, ocultando a complexidade subjacente e permitindo uma comunicação mais fácil e compreensível.
+
+
+
+- Quando usar:  
+	+ Utilize o padrão Facade quando você precisa ter uma interface limitada mas simples para um subsistema complexo.
+	+ Com o passar do tempo, subsistemas ficam mais complexos. Até mesmo aplicar padrões de projeto tipicamente leva a criação de mais classes. Um subsistema pode tornar-se mais flexível e mais fácil de se reutilizar em vários contextos, mas a quantidade de códigos padrão e de configuração que ele necessita de um cliente cresce cada vez mais. O Facade tenta consertar esse problema fornecendo um atalho para as funcionalidades mais usadas do subsistema que corresponde aos requerimentos do cliente.
+	+ Utilize o Facade quando você quer estruturar um subsistema em camadas.
+	+ Crie fachadas para definir pontos de entrada para cada nível de um subsistema. Você pode reduzir o acoplamento entre múltiplos subsistemas fazendo com que eles se comuniquem apenas através de fachadas.
+	
+
+	
+- Implementação:
+	+ Verifique se é possível providenciar uma interface mais simples que a que o subsistema já fornece. Você está no caminho certo se essa interface faz o código cliente independente de muitas classes do subsistema.
+	+ Declare e implemente essa interface em uma nova classe fachada. A fachada deve redirecionar as chamadas do código cliente para os objetos apropriados do subsistema. A fachada deve ser responsável por inicializar o subsistema e gerenciar seu ciclo de vida a menos que o código cliente já faça isso.
+	+ Para obter o benefício pleno do padrão, faça todo o código cliente se comunicar com o subsistema apenas através da fachada. Agora o código cliente fica protegido de qualquer mudança no código do subsistema. Por exemplo, quando um subsistema recebe um upgrade para uma nova versão, você só precisa modificar o código na fachada.
+	+ Se a fachada ficar grande demais, considere extrair parte de seu comportamento para uma nova e refinada classe fachada.
+
+
+
+- Vantagens:
+	+ Você pode isolar seu código da complexidade de um subsistema.
+
+
+
+- Desvantagens:
+	+ Uma fachada pode se tornar um objeto deus acoplado a todas as classes de uma aplicação.
+

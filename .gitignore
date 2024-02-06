@@ -1,0 +1,7 @@
+# Pastas
+/bin
+/.settings
+
+# Arquivos
+.classpath
+.project

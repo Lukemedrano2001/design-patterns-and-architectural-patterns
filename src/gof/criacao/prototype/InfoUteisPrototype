@@ -1,0 +1,43 @@
+Prototype: É um padrão de projeto criacional que permite copiar objetos existentes sem fazer seu código ficar dependente de suas classes.
+
+
+- Problema: Quando você precisa criar cópias de objetos existentes, mas não quer que seu código dependa das classes concretas desses objetos, pode enfrentar desafios. Em situações em que seu código interage com objetos provenientes de um código de terceiros através de uma interface, as classes concretas desses objetos podem ser desconhecidas, tornando difícil depender delas. Além disso, se houver um número significativo de subclasses que diferem apenas na forma como inicializam seus objetos, a criação de subclasses adicionais pode levar a uma hierarquia complexa.
+
+
+
+- Solução: O padrão Prototype resolve esse problema permitindo a cópia de objetos existentes sem depender das classes concretas desses objetos. Ele fornece uma interface geral para que o código cliente possa trabalhar com objetos que suportam clonagem, tornando-o independente das classes concretas. Isso é útil quando seu código interage com objetos de terceiros cujas classes são desconhecidas. O padrão Prototype também é útil quando você precisa reduzir o número de subclasses que diferem apenas na forma como inicializam seus objetos, permitindo a clonagem de protótipos pré-construídos.
+
+
+
+- Quando usar:  
+	+ Utilize o padrão Prototype quando seu código não deve depender de classes concretas de objetos que você precisa copiar.
+	+ Isso acontece muito quando seu código funciona com objetos passados para você de um código de terceiros através de alguma interface. As classes concretas desses objetos são desconhecidas, e você não pode depender delas mesmo que quisesse.
+	+ O padrão Prototype fornece o código cliente com uma interface geral para trabalhar com todos os objetos que suportam clonagem. Essa interface faz o código do cliente ser independente das classes concretas dos objetos que ele clona.
+	+ Utilize o padrão quando você precisa reduzir o número de subclasses que somente diferem na forma que inicializam seus respectivos objetos. Alguém pode ter criado essas subclasses para ser capaz de criar objetos com uma configuração específica.
+	+ O padrão Prototype permite que você use um conjunto de objetos pré construídos, configurados de diversas formas, como protótipos.
+	+ Ao invés de instanciar uma subclasse que coincide com alguma configuração, o cliente pode simplesmente procurar por um protótipo apropriado e cloná-lo.
+
+
+
+- Implementação: 
+	+ Crie uma interface protótipo e declare o método clonar nela. Ou apenas adicione o método para todas as classes de uma hierarquia de classes existente, se você tiver uma.
+	+ Uma classe protótipo deve definir o construtor alternativo que aceita um objeto daquela classe como um argumento. O construtor deve copiar os valores de todos os campos definidos na classe do objeto passado para a nova instância recém criada. Se você está mudando uma subclasse, você deve chamar o construtor da classe pai para permitir que a superclasse lide com a clonagem de seus campos privados.
+	+ O método de clonagem geralmente consiste em apenas uma linha: executando um operador new com a versão protótipo do construtor. Observe que toda classe deve explicitamente sobrescrever o método de clonagem and usar sua própria classe junto com o operador new. Do contrário, o método de clonagem pode produzir um objeto da classe superior.
+	+ Opcionalmente, crie um registro protótipo centralizado para armazenar um catálogo de protótipos usados com frequência.
+	+ Você pode implementar o registro como uma nova classe factory ou colocá-lo na classe protótipo base com um método estático para recuperar o protótipo. Esse método deve procurar por um protótipo baseado em critérios de busca que o código cliente passou para o método. O critério pode ser tanto uma string ou um complexo conjunto de parâmetros de busca. Após o protótipo apropriado ser encontrado, o registro deve cloná-lo e retornar a cópia para o cliente.
+	+ Por fim, substitua as chamadas diretas para os construtores das subclasses com chamadas para o método factory do registro do protótipo.
+
+
+
+- Vantagens:
+	+ Você pode clonar objetos sem acoplá-los a suas classes concretas.
+	+ Você pode se livrar de códigos de inicialização repetidos em troca de clonar protótipos pré-construídos.
+	+ Você pode produzir objetos complexos mais convenientemente.
+	+ Você tem uma alternativa para herança quando lidar com configurações pré determinadas para objetos complexos.
+
+
+
+- Desvantagens:
+	+ Clonar objetos complexos que têm referências circulares pode ser bem complicado.
+
+	

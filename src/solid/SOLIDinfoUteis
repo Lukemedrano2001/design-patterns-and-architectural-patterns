@@ -1,0 +1,38 @@
+SOLID: O acrônimo SOLID representa os cinco princípios que facilitam o processo de desenvolvimento — o que facilita a manutenção e a expansão do software.
+	Estes princípios são fundamentais na programação orientada a objetos e podem ser aplicados em qualquer linguagem que adote este paradigma.
+
+
+
+S - Single Responsibility Principle (SRP):  
+	- “Cada classe deve ter um, e somente um, motivo para mudar.”
+	- Se uma classe tem várias responsabilidades, mudar um requisito do projeto pode trazer várias razões para modificar a classe. Por isso, as classes devem ter responsabilidades únicas.
+	
+
+
+O - Open-Closed Principle (OCP): 
+	- Classes e Métodos devem estar abertas para extensão, mas fechadas para modificação. 
+	- Ou seja, se uma classe está aberta para modificação, quanto mais recursos adicionarmos, mais complexa ela vai ficar.
+	- O ideal é adaptar o código não para alterar a classe, mas para estendê-la. Em geral, isso é feito quando abstraímos um código para uma interface. 
+	- Aplicando o Open-Closed, é possível deixar o nosso código semelhante ao mundo real, praticando de maneira sólida a orientação a objetos.
+	- Pense em um caminhão: Toda a sua implementação, como motor, bateria e cabine é fechada para modificação. Porém, podemos estender as tarefas que ele realiza dependendo da carroceria que anexamos.
+
+
+
+L - Liskov Substitution Principle (LSP): 
+	- “Classes filhas devem ser capazes de substituir suas Classes mães”.
+	- Ou seja, uma classe-filha deve ser capaz de executar tudo que sua classe-mãe faz. Esse princípio se conecta com o polimorfismo e reforça esse pilar da POO.
+	- É importante notar também que, ao entendermos esse princípio, passamos a nos atentar mais para o código: caso um método de uma classe-filha tenha um retorno muito diferente do da classe-mãe, ou lance uma exceção, por exemplo, já dá para perceber que algo está errado.
+	- Se no seu programa você tem uma abstração que se parece com um pato, faz o som de um pato, nada como um pato, mas precisa de baterias, sua abstração está equivocada.
+
+
+
+I - Interface Segregation Principle (ISP): 
+	- “Uma classe não deve ser forçada a implementar interfaces e métodos que não serão utilizados”.
+
+
+
+D - Dependency Inverse Principle (DIP): 
+	- "Classes e Métodos de alto nível não devem depender de implementações concretas e sim de abstrações ou interfaces, e essas abstrações e interfaces definem o contrato de funcionamento".
+	
+	
+	

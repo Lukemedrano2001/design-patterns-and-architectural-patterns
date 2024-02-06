@@ -1,0 +1,35 @@
+Criador:
+
+
+
+- Problema: Ao projetar sistemas orientados a objetos, é necessário determinar qual classe deve ser responsável pela criação de instâncias de outra classe. O problema surge quando há várias classes que poderiam ser responsáveis por criar uma instância de outra classe.
+
+
+
+- Solução: O padrão de design GRASP chamado Criador sugere que a classe que possui a responsabilidade de criar uma instância de outra classe seja aquela que tem a agregação mais forte com a classe que está sendo criada.
+
+
+
+- Quando usar:
+	+ Use quando há a necessidade de determinar qual classe deve ser responsável por criar instâncias de outra classe.
+	+ Utilize quando há várias opções e é necessário escolher a classe mais apropriada para ser o "criador".
+
+
+
+- Implementação:
+	+ A classe que tem a responsabilidade de criar instâncias de outra classe deve ser aquela que tem uma associação mais forte com a classe sendo criada.
+	+ A classe "criadora" deve ter uma relação de composição ou agregação com a classe criada.
+
+
+
+- Vantagens:
+	+ Ajuda a determinar a responsabilidade apropriada para a criação de instâncias.
+	+ Contribui para um design mais claro e coeso.
+
+
+
+- Desvantagens:
+	+ Pode ser subjetivo determinar qual classe tem a agregação mais forte.
+	+ Não resolve todos os problemas de criação de instâncias, especialmente em casos complexos.
+
+

@@ -1,0 +1,36 @@
+Alta Coesão:
+
+
+
+- Problema: O Código com responsabilidades dispersas em classes pode se tornar difícil de entender e manter, tornando-se propenso a erros e complexidades desnecessárias.
+
+
+
+- Solução: A alta coesão aborda esse problema concentrando responsabilidades relacionadas em classes específicas, garantindo que cada classe tenha uma única e clara responsabilidade.
+
+
+
+- Quando usar:
+	+ Use quando desejar melhorar a clareza e manutenibilidade do código, evitando que uma classe tenha múltiplas responsabilidades não relacionadas.
+	+ Utilize quando é crucial que cada classe realize um conjunto específico e bem-definido de tarefas, mantendo suas funcionalidades coesas.
+
+
+- Implementação:
+	+ Divida as responsabilidades de suas classes de forma que cada uma execute uma tarefa específica e relacionada.
+	+ Evite que uma classe tenha funcionalidades não relacionadas, mantendo-a focada em sua única responsabilidade.
+	+ Utilize interfaces ou abstrações para garantir que cada classe implemente apenas o necessário para sua responsabilidade específica.
+
+
+
+- Vantagens:
+	+ Melhora a legibilidade e compreensão do código.
+	+ Facilita a manutenção e reduz a complexidade.
+	+ Torna o código mais modular e reutilizável.
+	+ Facilita a identificação e correção de problemas.
+
+
+- Desvantagens:
+	+ Pode resultar em um maior número de classes pequenas, o que pode parecer excessivo em alguns casos.
+	+ Algumas mudanças podem exigir alterações em várias classes, o que pode aumentar a complexidade em certas situações.
+
+

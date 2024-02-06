@@ -1,0 +1,34 @@
+Protected Variations:
+
+
+
+- Problema: O problema abordado pelo Protected Variations é a necessidade de proteger componentes internos de um sistema contra variações em outros componentes externos. Isso é especialmente relevante quando as mudanças nos componentes externos podem afetar adversamente a estabilidade ou funcionalidade dos componentes internos.
+
+
+
+- Solução: A solução proposta pelo Protected Variations é criar interfaces estáveis e protegidas para os componentes internos, evitando exposição direta de detalhes de implementação. Isso cria uma camada de proteção que permite que os componentes internos evoluam independentemente de mudanças nos componentes externos.
+
+
+
+- Quando usar: 
+	+ O Protected Variations é útil quando há uma expectativa de que os componentes externos podem mudar e essa mudança pode impactar negativamente os componentes internos. É particularmente relevante em sistemas onde a estabilidade e a segurança dos componentes internos são críticas.
+
+
+
+- Implementação: 
+	+ A implementação do Protected Variations envolve a definição de interfaces estáveis para os componentes internos e o fornecimento de camadas de abstração que protegem esses componentes contra variações externas. Isso pode ser alcançado por meio de interfaces, classes abstratas ou padrões de design que limitam a exposição de detalhes internos.
+
+
+
+- Vantagens:
+	+ Protege os componentes internos contra variações nos componentes externos, garantindo estabilidade.
+	+ Facilita a manutenção e evolução independentes dos diferentes componentes do sistema.
+
+
+
+- Desvantagens:
+	+ Pode adicionar uma camada adicional de complexidade ao sistema.
+	+ Exige um cuidado extra no design para garantir que as interfaces protegidas sejam efetivas contra variações externas.
+
+
+

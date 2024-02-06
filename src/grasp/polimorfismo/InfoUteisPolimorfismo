@@ -1,0 +1,34 @@
+Polimorfismo:
+
+
+
+- Problema: O problema abordado pelo Polimorfismo está relacionado à necessidade de lidar com diferentes tipos de objetos de maneira uniforme em um sistema. Quando há a necessidade de tratar objetos de classes diferentes de maneira semelhante, mas cada classe pode ter sua própria implementação específica.
+
+
+
+- Solução: A solução é usar o Polimorfismo, que permite que objetos de diferentes classes sejam tratados de maneira uniforme por meio de interfaces comuns. O Polimorfismo permite que um único código funcione com diferentes tipos de objetos, adaptando-se dinamicamente às suas implementações específicas.
+
+
+
+- Quando usar:
+	+ O Polimorfismo é adequado quando há a necessidade de tratar objetos de classes distintas de maneira homogênea. É particularmente útil quando diferentes classes implementam a mesma interface ou herdam da mesma classe base.
+
+
+
+- Implementação:
+	+ A implementação do Polimorfismo envolve a criação de interfaces comuns, classes abstratas ou herança, permitindo que diferentes classes sejam tratadas de maneira polimórfica. Isso geralmente é alcançado por meio de métodos comuns que podem ser implementados de maneira específica em cada classe.
+
+
+
+- Vantagens:
+	+ Flexibilidade no design, permitindo extensibilidade do código.
+	+ Código mais genérico e reutilizável, pois pode lidar com diferentes tipos de objetos sem conhecimento específico de suas implementações.
+
+
+
+- Desvantagens:
+	+ Pode ser complexo de entender e manter, especialmente em sistemas grandes.
+	+ A introdução de muitos polimorfismos pode levar a um código difícil de rastrear.
+
+
+

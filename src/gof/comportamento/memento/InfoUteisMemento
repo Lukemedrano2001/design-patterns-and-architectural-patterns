@@ -1,0 +1,42 @@
+Memento: É um padrão de projeto comportamental que permite que você salve e restaure o estado anterior de um objeto sem revelar os detalhes de sua implementação.
+
+
+- Problema: Quando você precisa salvar e restaurar o estado anterior de um objeto sem expor os detalhes de sua implementação. Isso é útil para criar retratos do estado do objeto, permitindo sua restauração em momentos específicos.
+
+
+
+- Solução: O padrão Memento permite que você faça cópias completas do estado de um objeto, incluindo campos privados, e armazená-los separadamente do objeto. Ele é útil para situações como desfazer operações ou reverter transações em caso de erros, garantindo que o acesso direto aos campos ou getters/setters do objeto seja evitado.
+
+
+
+- Quando usar:  
+	+ Utilize o padrão Memento quando você quer produzir retratos do estado de um objeto para ser capaz de restaurar um estado anterior do objeto. O padrão Memento permite que você faça cópias completas do estado de um objeto, incluindo campos privados, e armazená-los separadamente do objeto. Embora a maioria das pessoas vão lembrar desse padrão graças ao caso “desfazer”, ele também é indispensável quando se está lidando com transações (isto é, se você precisa reverter uma operação quando se depara com um erro).
+	+ Utilize o padrão quando o acesso direto para os campos/getters/setters de um objeto viola seu encapsulamento. O Memento faz o próprio objeto ser responsável por criar um retrato de seu estado. Nenhum outro objeto pode ler o retrato, fazendo do estado original do objeto algo seguro e confiável.
+	
+	
+	
+- Implementação:
+	+ Determine qual classe vai fazer o papel de originadora. É importante saber se o programa usa um objeto central deste tipo ou múltiplos objetos pequenos.
+	+ Crie a classe memento. Um por um, declare o conjunto dos campos que espelham os campos declarados dentro da classe originadora.
+	+ Faça a classe memento ser imutável. Um memento deve aceitar os dados apenas uma vez, através do construtor. A classe não deve ter setters.
+	+ Se a sua linguagem de programação suporta classes aninhadas, aninhe o memento dentro da originadora. Se não, extraia uma interface em branco da classe memento e faça todos os outros objetos usá-la para se referir ao memento. Você pode adicionar algumas operações de metadados para a interface, mas nada que exponha o estado da originadora.
+	+ Adicione um método para produção de mementos na classe originadora. A originadora deve passar seu estado para o memento através de um ou múltiplos argumentos do construtor do memento.
+	+ O tipo de retorno do método deve ser o da interface que você extraiu na etapa anterior (assumindo que você extraiu alguma coisa). Por debaixo dos panos, o método de produção de memento deve funcionar diretamente com a classe memento.
+	+ Adicione um método para restaurar o estado da classe originadora para sua classe. Ele deve aceitar o objeto memento como um argumento. Se você extraiu uma interface na etapa anterior, faça-a do tipo do parâmetro. Neste caso, você precisa converter o tipo do objeto que está vindo para a classe memento, uma vez que a originadora precisa de acesso total a aquele objeto.
+	+ A cuidadora, estando ela representando um objeto comando, um histórico, ou algo completamente diferente, deve saber quando pedir novos mementos da originadora, como armazená-los, e quando restaurar a originadora com um memento em particular.
+	+ O elo entre cuidadoras e originadoras deve ser movido para dentro da classe memento. Neste caso, cada memento deve se conectar com a originadora que criou ele. O método de restauração também deve ser movido para a classe memento. Contudo, isso tudo faria sentido somente se a classe memento estiver aninhada dentro da originadora ou a classe originadora fornece setters suficientes para sobrescrever seu estado.
+
+
+
+- Vantagens:
+	+ Você pode produzir retratos do estado de um objeto sem violar seu encapsulamento.
+	+ Você pode simplificar o código da originadora permitindo que a cuidadora mantenha o histórico do estado da originadora.
+ 
+
+
+- Desvantagens:
+	+ A aplicação pode consumir muita RAM se os clientes criarem mementos com muita frequência.
+	+ Cuidadoras devem acompanhar o ciclo de vida da originadora para serem capazes de destruir mementos obsoletos.
+	+ A maioria das linguagens de programação dinâmicas, tais como PHP, Python, e JavaScript, não conseguem garantir que o estado dentro do memento permaneça intacto.
+
+

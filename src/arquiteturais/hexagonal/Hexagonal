@@ -1,0 +1,28 @@
+Arquitetura Hexagonal (Ports and Adapters): É um padrão arquitetural que busca promover a independência e a modularidade de um sistema. O nome "Hexagonal" refere-se à forma hexagonal que representa as camadas e a interação entre elas.
+
+
+
+- Principais Componentes:
+	+ Portas (Ports): São interfaces que definem os contratos para as operações que o sistema oferece. Essas interfaces representam as maneiras pelas quais o sistema interage com o mundo exterior, como serviços externos, UI (interface do usuário), e assim por diante.
+	+ Adaptadores (Adapters): São implementações concretas das interfaces definidas nas portas. Eles traduzem as chamadas de método feitas nas portas para operações específicas do sistema e vice-versa. Os adaptadores conectam as portas ao sistema real.
+	+ Core (Núcleo): É o componente central que contém a lógica de negócios e as regras da aplicação. O core não depende dos detalhes de implementação das portas ou adaptadores, proporcionando isolamento e testabilidade.
+	
+	
+	
+- Vantagens:
+	+ Desacoplamento: As portas definem contratos, permitindo que diferentes partes do sistema evoluam independentemente. O core não está acoplado aos detalhes de implementação das portas.
+	+ Testabilidade: A separação entre core, portas e adaptadores facilita a criação de testes unitários, pois é possível isolar a lógica de negócios do restante do sistema.
+	+ Flexibilidade: Novas interfaces (portas) ou implementações (adaptadores) podem ser adicionadas sem impactar o core, proporcionando flexibilidade para integrar serviços externos ou adaptar-se a mudanças nos requisitos.
+	
+	
+
+- Desvantagens:
+	+ Complexidade Inicial: A necessidade de criar interfaces e adaptadores pode adicionar complexidade inicial ao projeto.
+	+ Overhead de Abstração: O uso excessivo de interfaces pode levar a um overhead de abstração, especialmente em projetos menores.
+
+
+
+- Exemplo:
+	+ Imagine um sistema de e-commerce. As portas podem ser interfaces para interações com o banco de dados, serviços de pagamento e UI. Os adaptadores seriam as implementações específicas para lidar com o banco de dados, serviços de pagamento e a interface do usuário. O core conteria as regras de negócios, como processamento de pedidos e cálculos de preços. Essa estrutura modular facilita a manutenção, expansão e teste do sistema.
+	
+	

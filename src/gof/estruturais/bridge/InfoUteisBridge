@@ -1,0 +1,46 @@
+Bridge: É um padrão de projeto estrutural que permite que você divida uma classe grande ou um conjunto de classes intimamente ligadas em duas hierarquias separadas—abstração e implementação—que podem ser desenvolvidas independentemente umas das outras.
+
+
+
+- Problema: Ao lidar com uma classe monolítica que possui diversas variantes da mesma funcionalidade, pode-se enfrentar desafios como dificuldade de compreensão, aumento da complexidade e maior tempo necessário para realizar alterações. Mudanças em uma variante da funcionalidade podem exigir modificações em toda a classe, aumentando o risco de erros e dificultando a manutenção do código.
+
+
+
+- Solução: O padrão Bridge resolve esse problema, permitindo a divisão e organização da classe monolítica em duas hierarquias separadas: abstração e implementação. A abstração representa a interface de alto nível, enquanto a implementação encapsula as diferentes variantes de funcionalidade. Essa separação permite a evolução independente das hierarquias, simplificando a manutenção, reduzindo o acoplamento e facilitando a introdução de novas funcionalidades.
+
+
+
+- Quando usar: 
+	+ Abstração (também chamado de interface) é uma camada de controle de alto nível para alguma entidade. Essa camada não deve fazer nenhum tipo de trabalho por conta própria. Ela deve delegar o trabalho para a camada de implementação (também chamada de plataforma).
+	+ Observe que não estamos falando sobre interfaces ou classes abstratas da sua linguagem de programação. São coisas diferentes. 
+	+ Utilize o padrão Bridge quando você quer dividir e organizar uma classe monolítica que tem diversas variantes da mesma funcionalidade (por exemplo, se a classe pode trabalhar com diversos servidores de base de dados).
+	+ Quanto maior a classe se torna, mais difícil é de entender como ela funciona, e mais tempo se leva para fazer mudanças. As mudanças feitas para uma das variações de funcionalidade podem precisar de mudanças feitas em toda a classe, o que quase sempre resulta em erros ou falha em lidar com efeitos colaterais.
+	+ O padrão Bridge permite que você divida uma classe monolítica em diversas hierarquias de classe. Após isso, você pode modificar as classes em cada hierarquia independentemente das classes nas outras. Essa abordagem simplifica a manutenção do código e minimiza o risco de quebrar o código existente.
+	+ Utilize o Bridge se você precisar ser capaz de trocar implementações durante o momento de execução.
+	+ Embora seja opcional, o padrão Bridge permite que você substitua o objeto de implementação dentro da abstração. É tão fácil quanto designar um novo valor para um campo.
+	+ A propósito, este último item é o maior motivo pelo qual muitas pessoas confundem o Bridge com o padrão Strategy. Lembre-se que um padrão é mais que apenas uma maneira de estruturar suas classes. Ele também pode comunicar intenções e resolver um problema.
+	
+	
+	
+- Implementação:
+	+ Identifique as dimensões ortogonais em suas classes. Esses conceitos independentes podem ser: abstração/plataforma, domínio/infraestrutura, front-end/back-end, ou interface/implementação.
+	+ Veja quais operações o cliente precisa e defina-as na classe abstração base.
+	+ Determine as operações disponíveis em todas as plataformas. Declare aquelas que a abstração precisa na interface geral de implementação.
+	+ Crie classes concretas de implementação para todas as plataformas de seu domínio, mas certifique-se que todas elas sigam a interface de implementação.
+	+ Dentro da classe de abstração, adicione um campo de referência para o tipo de implementação. A abstração delega a maior parte do trabalho para o objeto de implementação que foi referenciado neste campo.
+	+ Se você tem diversas variantes de lógica de alto nível, crie abstrações refinadas para cada variante estendendo a classe de abstração básica.
+	+ O código cliente deve passar um objeto de implementação para o construtor da abstração para associar um com o outro. Após isso, o cliente pode esquecer sobre a implementação e trabalhar apenas com o objeto de abstração.
+
+
+
+- Vantagens:
+	+ Você pode criar classes e aplicações independentes de plataforma.
+	+ O código cliente trabalha com abstrações em alto nível. Ele não fica exposto a detalhes de plataforma.
+	+ Princípio aberto/fechado. Você pode introduzir novas abstrações e implementações independentemente uma das outras.
+	+ Princípio de responsabilidade única. Você pode focar na lógica de alto nível na abstração e em detalhes de plataforma na implementação.
+
+
+
+- Desvantagens:
+	+ Você pode tornar o código mais complicado ao aplicar o padrão em uma classe altamente coesa.
+

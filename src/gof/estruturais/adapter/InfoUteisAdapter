@@ -1,0 +1,42 @@
+Adapter: É um padrão de projeto estrutural que permite objetos com interfaces incompatíveis colaborarem entre si.
+
+
+
+- Problema: Muitas vezes, ao integrar classes ou sistemas existentes em um código, surge o problema de interfaces incompatíveis. Isso pode ocorrer quando se trabalha com uma classe legada de terceiros, uma classe antiga ou classes que possuem dependências distintas. A falta de compatibilidade entre as interfaces dificulta a colaboração direta entre esses objetos.
+
+
+
+- Solução: O padrão Adapter resolve esse problema, permitindo que objetos com interfaces incompatíveis cooperem entre si. A solução envolve a criação de uma classe adaptadora, que atua como um intermediário entre o código existente e a classe com interface incompatível. A classe adaptadora traduz as chamadas do código para a interface da classe incompatível, permitindo a colaboração sem modificar a classe existente.
+
+
+
+- Quando usar:  
+	+ Utilize a classe Adaptador quando você quer usar uma classe existente, mas sua interface não for compatível com o resto do seu código.
+	+ O padrão Adapter permite que você crie uma classe de meio termo que serve como um tradutor entre seu código e a classe antiga, uma classe de terceiros, ou qualquer outra classe com uma interface estranha.
+	+ Utilize o padrão quando você quer reutilizar diversas subclasses existentes que não possuam alguma funcionalidade comum que não pode ser adicionada a superclasse.
+	+ Você pode estender cada subclasse e colocar a funcionalidade faltante nas novas classes filhas. Contudo, você terá que duplicar o código em todas as novas classes, o que cheira muito mal.
+	+ Uma solução muito mais elegante seria colocar a funcionalidade faltante dentro da classe adaptadora. Então você encobriria os objetos com as funcionalidades faltantes dentro do adaptador, ganhando tais funcionalidades de forma dinâmica. Para isso funcionar, as classes alvo devem ter uma interface em comum, e o campo do adaptador deve seguir aquela interface. Essa abordagem se parece muito com o padrão Decorator.
+	
+	
+	
+- Implementação:
+	+ Certifique-se que você tem ao menos duas classes com interfaces incompatíveis:
+		1-) Uma classe serviço útil, que você não pode modificar (quase sempre de terceiros, antiga, ou com muitas dependências existentes).
+		2-) Uma ou mais classes cliente que seriam beneficiadas com o uso da classe serviço.
+	+ Declare a interface cliente e descreva como o cliente se comunica com o serviço.
+	+ Cria a classe adaptadora e faça-a seguir a interface cliente. Deixe todos os métodos vazios por enquanto.
+	+ Adicione um campo para a classe do adaptador armazenar uma referência ao objeto do serviço. A prática comum é inicializar esse campo via o construtor, mas algumas vezes é mais conveniente passá-lo para o adaptador ao chamar seus métodos.
+	+ Um por um, implemente todos os métodos da interface cliente na classe adaptadora. O adaptador deve delegar a maioria do trabalho real para o objeto serviço, lidando apenas com a conversão da interface ou formato dos dados.
+	+ Os Clientes devem usar o adaptador através da interface cliente. Isso irá permitir que você mude ou estenda o adaptador sem afetar o código cliente.
+
+
+
+- Vantagens:
+	+ Princípio de responsabilidade única. Você pode separar a conversão de interface ou de dados da lógica primária do negócio do programa.
+	+ Princípio aberto/fechado. Você pode introduzir novos tipos de adaptadores no programa sem quebrar o código cliente existente, desde que eles trabalhem com os adaptadores através da interface cliente.
+
+
+
+- Desvantagens:
+	+ A complexidade geral do código aumenta porque você precisa introduzir um conjunto de novas interfaces e classes. Algumas vezes é mais simples mudar a classe serviço para que ela se adeque com o resto do seu código.
+	

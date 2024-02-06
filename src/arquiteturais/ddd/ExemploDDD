@@ -1,0 +1,66 @@
+Domínio: E-commerce
+
+- Entidades:
+	+ Produto (com identidade única, por exemplo, um número SKU).
+	+ Cliente (com identidade única, como um número de cliente).
+
+
+- Objetos de Valor:
+	+ Endereço (não possui identidade própria, definido por atributos como rua, cidade, etc.).
+
+
+- Agregados:
+	+ Pedido (agrega itens do pedido, cliente e informações de envio).
+
+
+- Repositórios:
+	+ Repositório de Produtos (persiste e recupera produtos).
+	+ Repositório de Pedidos (persiste e recupera pedidos).
+
+
+- Serviços de Domínio:
+	+ Serviço de Desconto (lógica de aplicação de descontos que não se encaixa diretamente em uma entidade).
+
+- Camada de Aplicação:
+	+ Controladores que coordenam a criação de pedidos, interagindo com o serviço de desconto e persistindo no repositório de pedidos.
+
+
+- Eventos de Domínio:
+	+ "PedidoCriado" - representa a criação de um novo pedido.
+	+ "ItemAdicionado" - representa a adição de um item ao carrinho.
+
+
+- Bounded Context (Contexto Delimitado):
+	+ Contexto de Vendas: Lidando com pedidos, produtos e clientes.
+	+ Contexto de Logística: Lidando com informações de envio.
+
+
+- Interfaces Anti-Corruption (IAC):
+	+ Tradução de objetos de valor do contexto de vendas para o contexto de logística.
+
+
+- Módulos:
+	+ Módulo de Vendas: Contendo classes relacionadas a pedidos, produtos e clientes.
+	+ Módulo de Logística: Contendo classes relacionadas a informações de envio.
+
+
+- DSL (Domain-Specific Language):
+	+ Usando uma linguagem específica para expressar regras de desconto ou políticas de envio.
+
+
+- Padrões Estratégicos e Táticos:
+	+ Estratégia de Desconto por Categoria: Aplicando diferentes descontos com base na categoria do produto.
+
+
+- Testes de Unidade no Domínio:
+	+ Testes que validam as regras de negócio, como a aplicação correta de descontos.
+
+
+- Projeções e Leituras:
+	+ Modelo otimizado para leitura de dados para exibir histórico de pedidos de um cliente.
+
+
+- Materializar Agregados:
+	+ Recriação de agregados de pedidos a partir de eventos armazenados para manter a consistência do sistema.
+
+

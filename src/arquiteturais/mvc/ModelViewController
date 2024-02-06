@@ -1,0 +1,27 @@
+Model-View-Controller (MVC): É um padrão arquitetural amplamente utilizado no desenvolvimento de software. Ele se divide em três componentes principais: Model, View, Controller.
+
+
+
+- Model: 
+	+ Representa a camada de lógica de negócios.
+	+ Recebe as requisições do Controller, processa os dados (podendo incluir acesso ao banco de dados e manipulação dos dados) e retorna os resultados. 
+	+ Exemplo: Regras de negócio, Entidades, Camada de acesso a dados.
+
+
+
+- View: 
+	+ Representa a camada de visualização.
+	+ Recebe os resultados do Model e os apresenta ao usuário. 
+	+ É responsável pela interface de usuário. 
+	+ Exemplo: Front-end da aplicação.
+
+
+
+- Controller: 
+	+ Representa a camada de controle.
+	+ Recebe as requisições do usuário por meio da View, interage com o Model para processar essas requisições e, em seguida, envia os resultados de volta para a View para serem apresentados ao usuário. 
+	+ É responsável pela lógica de controle da aplicação. 
+	+ Exemplo: Back-end da aplicação.
+
+	
+	

@@ -1,0 +1,28 @@
+Event Driven Architeture (EDA): É um estilo arquitetural em que os componentes da aplicação se comunicam por meio da produção, detecção e reação a eventos, promovendo a desacoplação e a escalabilidade.
+
+
+
+- Características Principais:
+	+ Eventos como Ponto de Comunicação: A comunicação entre os componentes é baseada em eventos, que são mensagens assíncronas indicando uma mudança de estado.
+	+ Desacoplamento: Os componentes não precisam conhecer uns aos outros, apenas os eventos que produzem ou consomem.
+	+ Elasticidade: A arquitetura pode escalar facilmente, pois os eventos podem ser tratados independentemente.
+
+
+
+- Vantagens:
+	+ Desacoplamento Forte: Componentes independentes, reduzindo interdependências e facilitando mudanças e atualizações.
+	+ Elasticidade e Escalabilidade: Facilidade em escalar partes específicas do sistema que recebem maior carga de eventos.
+	+ Reatividade: Permite reagir dinamicamente a mudanças no sistema, como atualizações de estado.
+
+
+
+- Desvantagens:
+	+ Consistência: Garantir a consistência dos dados em um sistema distribuído pode ser um desafio.
+	+ Complexidade na Orquestração: A orquestração de eventos pode se tornar complexa à medida que o sistema cresce.
+	+ Depuração e Rastreamento: Rastrear eventos e depurar sistemas baseados em eventos pode ser mais desafiador.
+
+
+
+- Exemplo: Um sistema em que microserviços se comunicam por meio da produção e consumo de eventos. Por exemplo, um serviço pode gerar um evento quando um novo pedido é feito, e outros serviços podem reagir a esse evento realizando ações apropriadas, como atualizando o estoque ou notificando o cliente.
+
+

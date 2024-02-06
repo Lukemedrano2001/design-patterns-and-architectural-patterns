@@ -1,0 +1,42 @@
+FlyWeight: É um padrão de projeto estrutural que permite a você colocar mais objetos na quantidade de RAM disponível ao compartilhar partes comuns de estado entre os múltiplos objetos ao invés de manter todos os dados em cada objeto.
+
+
+
+- Problema: Ao lidar com um grande número de objetos similares que consomem significativa quantidade de RAM, a replicação de dados em cada objeto pode resultar em uso excessivo de memória, tornando-se ineficiente.
+
+
+
+- Solução: O padrão Flyweight aborda esse problema permitindo que objetos compartilhem partes comuns de estado, chamadas de estado intrínseco, em vez de manter todos os dados em cada objeto. Isso economiza memória, pois as informações que são idênticas ou similares entre os objetos são mantidas em um local centralizado e compartilhadas.
+
+
+
+- Quando usar:  
++ Utilize o padrão Flyweight apenas quando seu programa deve suportar um grande número de objetos que mal cabem na RAM disponível.
++ O benefício de aplicar o padrão depende muito de como e onde ele é usado. Ele é mais útil quando:
+	1-) Uma aplicação precisa gerar um grande número de objetos similares
+isso drena a RAM disponível no dispositivo alvo
+	2-) Os objetos contém estados duplicados que podem ser extraídos e compartilhados entre múltiplos objetos
+	
+	
+	
+- Implementação:
+	+ Divida os campos de uma classe que irá se tornar um flyweight em duas partes:
+		1-) O estado intrínseco: os campos que contém dados imutáveis e duplicados para muitos objetos
+		2-) O estado extrínseco: os campos que contém dados contextuais únicos para cada objeto
+	+ Deixe os campos que representam o estado intrínseco dentro da classe, mas certifique-se que eles sejam imutáveis. Eles só podem obter seus valores iniciais dentro do construtor.
+	+ Examine os métodos que usam os campos do estado extrínseco. Para cada campo usado no método, introduza um novo parâmetro e use-o ao invés do campo.
+	+ Opcionalmente, crie uma classe fábrica para gerenciar o conjunto de flyweights. Ela deve checar por um flyweight existente antes de criar um novo. Uma vez que a fábrica está rodando, os clientes devem pedir flyweights apenas através dela. Eles devem descrever o flyweight desejado ao passar o estado intrínseco para a fábrica.
+	+ O cliente deve armazenar ou calcular valores para o estado extrínseco (contexto) para ser capaz de chamar métodos de objetos flyweight. Por conveniência, o estado extrínseco junto com o campo de referência flyweight podem ser movidos para uma classe de contexto separada.
+
+
+
+- Vantagens:
+	+ Você pode economizar muita RAM, desde que seu programa tenha muitos objetos com atributos similare/idênticos.
+
+
+
+- Desvantagens:
+	+ Você pode estar trocando RAM por ciclos de CPU quando parte dos dados de contexto precisa ser recalculado cada vez que alguém chama um método flyweight.
+	+ O código fica muito mais complicado. Novos membros de equipe sempre se perguntarão por que o estado de uma entidade foi separado de tal forma.
+
+

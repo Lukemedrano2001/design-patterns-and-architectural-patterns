@@ -1,0 +1,34 @@
+Pure Fabrication:
+
+
+
+- Problema: O problema abordado pelo Pure Fabrication é a necessidade de designar responsabilidades a classes que não representam conceitos do domínio do problema. Às vezes, pode ser difícil atribuir uma responsabilidade real a uma classe específica, ou pode ser mais apropriado criar uma classe fictícia para gerenciar determinadas funcionalidades.
+
+
+
+- Solução: A solução é criar classes puramente fictícias (Pure Fabrication) que não representam conceitos do domínio, mas existem apenas para facilitar a implementação de certas funcionalidades. Essas classes não têm uma correspondência direta com objetos do mundo real, mas ajudam a manter o design mais coeso e flexível.
+
+
+
+- Quando usar:
+	+ O Pure Fabrication é útil quando há a necessidade de delegar responsabilidades que não se encaixam naturalmente em classes que representam conceitos do domínio. Isso ajuda a manter o design mais modular e evita sobrecarregar classes importantes com funcionalidades secundárias.
+
+
+
+- Implementação:
+	+ A implementação do Pure Fabrication envolve a criação de classes que não têm uma correspondência direta com entidades do domínio, mas são criadas para fornecer serviços ou funcionalidades específicas.
+
+
+
+- Vantagens:
+	+ Ajuda a manter o design mais coeso.
+	+ Evita a sobrecarga de responsabilidades em classes do domínio.
+	+ Facilita a manutenção e extensão do sistema.
+
+
+
+- Desvantagens:
+	+ Pode levar a um aumento no número de classes no sistema.
+	+ Pode ser desafiador explicar a utilidade dessas classes em termos do domínio do problema.
+
+

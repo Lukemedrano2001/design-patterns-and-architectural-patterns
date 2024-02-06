@@ -1,0 +1,46 @@
+Test Driven Development (TDD): É uma prática de desenvolvimento de software em que os testes automatizados são criados antes mesmo da implementação do código, orientando o design e garantindo a qualidade desde o início.
+
+
+
+- Processo Básico:
+	+ Escrever um Teste: Criar um teste automatizado que define uma funcionalidade ou melhoria desejada.
+	+ Executar o Teste: Garantir que o teste falhe inicialmente, pois a funcionalidade ainda não foi implementada.
+	+ Implementar a Funcionalidade: Criar o código mínimo necessário para passar no teste recém-criado.
+	+ Refatorar o Código: Aprimorar a implementação mantendo a funcionalidade correta e a qualidade do código.
+	+ Repetir: Repetir o ciclo, criando novos testes para novas funcionalidades ou melhorias.
+
+
+
+- Tipos de Testes no TDD:
+	+ Testes Unitários: Testam pequenas unidades de código, como funções ou métodos.
+	+ Testes de Integração: Verificam a interação entre diferentes partes do sistema.
+	+ Testes de Aceitação: Confirmam se a aplicação atende aos requisitos do usuário.
+	+ Testes de Regressão: Garantem que as alterações no código não quebrem funcionalidades existentes.
+	+ Testes de Performance: Avaliam o desempenho e a eficiência do sistema.
+	+ Testes de Segurança: Verificam se o sistema é resistente a ameaças de segurança.
+	+ Testes de Usabilidade: Avaliam a experiência do usuário para garantir que a interface e as funcionalidades sejam intuitivas.
+	+ Testes de Integração Contínua: Automatizam a execução de testes sempre que há uma integração de código.
+	+ Testes de Resiliência: Avaliam como o sistema se comporta em situações de falha.
+
+
+
+- Vantagens:
+	+ Confiança: Garante que o código funciona conforme esperado.
+	+ Documentação Viva: Os testes servem como documentação atualizada e funcional do sistema.
+	+ Design Orientado a Testes: Incentiva a criação de código modular, desacoplado e de fácil teste.
+
+
+
+- Desvantagens:
+	+ Mudança Cultural: Requer uma mudança de mentalidade na equipe para priorizar a criação de testes antes da implementação.
+	+ Aprendizado Inicial: Pode levar tempo para dominar a prática e seus benefícios.
+
+
+
+- Exemplo Prático:
+	+ Criação de uma Calculadora:
+		1-) Teste: testeSoma(): Verifica se a soma de dois números é correta.
+		2-) Implementação Mínima: Criar uma função que retorna a soma dos dois números.
+		3-) Refatoração: Aprimorar o código, se necessário, mantendo a soma correta.
+
+
